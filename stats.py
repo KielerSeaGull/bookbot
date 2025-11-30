@@ -28,12 +28,12 @@ def tran_dict_to_list_of_dict(symbol_count: dict[str, int]) -> list[dict[str, An
     list_of_dicts.sort(reverse = True, key = sort_on)  
     return list_of_dicts
 
-def print_report(booktext: str, list_of_dict: list[dict[str, Any]]) -> None:
+def print_report(path: str, booktext: str, list_of_dict: list[dict[str, Any]]) -> None:
     num_words: int = get_num_words(booktext)
     #print(f"{list_of_dict=}")
     #num_symbols: dict[str, int] = get_symbols_count(get_book_text(path_to_book): str)
     print("============ BOOKBOT ============")
-    print(f"Analyzing book found at frankenstein.txt...")
+    print(f"Analyzing book found at {path}...")
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
     print("--------- Character Count -------")
