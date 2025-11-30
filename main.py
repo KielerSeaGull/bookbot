@@ -1,9 +1,10 @@
 from stats import *
 import sys
 
-if not sys.argv[1]:
+if len(sys.argv) != 2:
     print("Usage: python3 main.py <path_to_book>")
     sys.exit(1)
+
 path: str = sys.argv[1]
 
 def get_book_text(path: str) -> str:
